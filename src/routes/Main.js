@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import Grid from "@material-ui/core/Grid";
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 import { DrawerComponent, Home } from "../components";
 import { PreProductionRoute } from "./PreProductionRoute";
@@ -31,7 +31,7 @@ export default function Main() {
 
   return (
     <div className={classes.root}>
-      <BrowserRouter>
+      <HashRouter>
         <Grid container className={classes.container}>
           <Grid item xs={2}>
             <DrawerComponent />
@@ -44,7 +44,7 @@ export default function Main() {
             </Switch>
           </Grid>
         </Grid>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
